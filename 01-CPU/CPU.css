@@ -3,10 +3,10 @@ body {
     font-family: 'Roboto Condensed';
     font-size: 20px;
     padding:1% 5%;
-    background-image:url('img/pcb.jpg');
-    background-attachment:fixed;
-    background-repeat:no-repeat;
-    background-size:cover;
+    /*background-image:url('img/pcb.jpg');*/
+    /*background-attachment:fixed;*/
+    /*background-repeat:no-repeat;*/
+    /*background-size:cover;*/
 }
 ::backdrop
 {
@@ -105,3 +105,10 @@ div
             Стили будут применяться ко всем элементам <p>, которые следуют за элементом <div> на одной глубине
     */
     }
+.cite
+{
+    /*border: solid 8px;*/
+    border-left: solid 5px blue;
+    margin: 50px 100px 200px 300px;
+    padding: 30px;
+}
