@@ -1,0 +1,126 @@
+﻿:root {
+    --bg-color: #0e0e10;
+    --card-bg: #18181c;
+    --text-color: #ffffff;
+    /* Тональные цвета групп (HEX) */
+    --c-alkali: #fe4a49;
+    --c-alkaline: #f6cd61;
+    --c-transition: #3da4ab;
+    --c-post-trans: #4a90e2;
+    --c-metalloid: #3ea374;
+    --c-non-metal: #a370f7;
+    --c-halogen: #ff9f43;
+    --c-noble: #bc70a4;
+    --c-lanthanide: #fc91ad;
+    --c-actinide: #00cccc;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.periodic-table {
+    display: grid;
+    /* 18 колонок с минимальным сжатием до 55px */
+    grid-template-columns: repeat(18, minmax(55px, 1fr));
+    /* 10 строк: 7 под периоды, 8-я пустая для отступа, 9 и 10 под f-элементы */
+    grid-template-rows: repeat(7, minmax(60px, 1fr)) 30px repeat(2, minmax(60px, 1fr));
+    gap: 4px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.element {
+    background-color: var(--card-bg);
+    border-radius: 4px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.15s ease-in-out;
+    cursor: default;
+    user-select: none;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Подхватываем координаты из HTML */
+    grid-column: var(--col);
+    grid-row: var(--row);
+}
+
+    /* Эффект при наведении */
+    .element:hover {
+        transform: scale(1.12);
+        z-index: 50;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+        border-color: rgba(255, 255, 255, 0.4);
+    }
+
+/* Контент внутри ячеек */
+.number {
+    font-size: 0.65rem;
+    color: #8e8e93;
+    font-weight: 500;
+}
+
+.symbol {
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.name {
+    font-size: 0.55rem;
+    text-align: center;
+    color: #aeaeb2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Раскраска левой рамки по классам групп */
+.alkali-metal {
+    border-left: 3px solid var(--c-alkali);
+}
+
+.alkaline-earth {
+    border-left: 3px solid var(--c-alkaline);
+}
+
+.transition-metal {
+    border-left: 3px solid var(--c-transition);
+}
+
+.post-transition {
+    border-left: 3px solid var(--c-post-trans);
+}
+
+.metalloid {
+    border-left: 3px solid var(--c-metalloid);
+}
+
+.non-metal {
+    border-left: 3px solid var(--c-non-metal);
+}
+
+.halogen {
+    border-left: 3px solid var(--c-halogen);
+}
+
+.noble-gas {
+    border-left: 3px solid var(--c-noble);
+}
+
+.lanthanide {
+    border-left: 3px solid var(--c-lanthanide);
+}
+
+.actinide {
+    border-left: 3px solid var(--c-actinide);
+}
