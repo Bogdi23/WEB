@@ -31,3 +31,28 @@ label
 {
     overflow:scroll;
 }
+/* /////////////////////////////////////////////////////////////////// */
+.images-and-colors
+{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+}
+
+.image-container
+{
+    border: solid 1px;
+    /*width:800px;
+    height:600px;*/
+}
+#image, .image-container
+{
+    width:400px;
+    height:300px;
+}
+.select-color
+{
+    display:flex;
+    justify-content:space-between;
+    margin:12px;
+}
